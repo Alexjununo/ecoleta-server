@@ -46,4 +46,4 @@ class PointsRepository {
   }
 }
 
-export default PointsRepository;
+export default new PointsRepository();

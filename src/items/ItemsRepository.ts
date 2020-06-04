@@ -6,4 +6,4 @@ class ItemsRepository {
   }
 }
 
-export default ItemsRepository;
+export default new ItemsRepository();

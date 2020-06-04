@@ -1,8 +1,6 @@
 import { Request, Response } from 'express';
 import knex from '../database/connection';
-import PointsRepository from './PointsRepository';
-
-const pointsRepository = new PointsRepository();
+import pointsRepository from './PointsRepository';
 
 class PointsController {
   async createPoint(req: Request, res: Response) {
@@ -47,4 +45,4 @@ class PointsController {
   }
 }
 
-export default PointsController;
+export default new PointsController();

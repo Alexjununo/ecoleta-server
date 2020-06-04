@@ -1,7 +1,5 @@
 import { Request, Response } from 'express';
-import ItemsRepository from './ItemsRepository';
-
-const itemsRepository = new ItemsRepository();
+import itemsRepository from './ItemsRepository';
 
 class ItemsController {
   async getItems(req: Request, res: Response) {
@@ -19,4 +17,4 @@ class ItemsController {
   }
 }
 
-export default ItemsController;
+export default new ItemsController();
