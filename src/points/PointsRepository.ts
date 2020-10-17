@@ -10,7 +10,7 @@ class PointsRepository {
     const insertedIds = await transaction('points').insert(point);
     const point_id = insertedIds[0];
 
-    pointItems = point.items.map((item_id: number) => {
+    pointItems = pointItems.map((item_id: number) => {
       return {
         item_id,
         point_id,

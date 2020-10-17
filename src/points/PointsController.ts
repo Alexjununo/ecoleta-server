@@ -11,9 +11,9 @@ class PointsController {
       ...req.body,
     };
 
-    await transaction.commit();
-
     const result = await pointsRepository.createPoint(point, transaction);
+
+    await transaction.commit();
 
     return res.json(result);
   }
