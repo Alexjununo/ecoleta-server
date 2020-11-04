@@ -33,7 +33,7 @@ class PointsRepository {
     return { ...point, items };
   }
 
-  async getPoints(items_id: number[], city: String, uf: String) {
+  async getPoints(items_id: number[], city: string, uf: string) {
     const points = await db('points')
       .join('point_items', 'points.id', '=', 'point_items.point_id')
       .whereIn('point_items.item_id', items_id)
